@@ -3,17 +3,17 @@
  *  Copyright 2021 Zander Preston
  */
 
-package exercises;
+package exercises.base;
 
 /*
  Write an application
     Prompt the user to input the first number.
-        Store first number in integer 'firstNumber'.
+        Store first number in integer 'firstNumber' by casting the String to an integer.
         If the user inputs nothing:
             Prompt the user to input a number.
             Store input in 'firstNumber'.
     Prompt the user to input the second number.
-        Store second number in integer 'secondNumber'.
+        Store second number in integer 'secondNumber' by casting the String to an integer.
         If the user inputs nothing:
             See above, in regard to 'secondNumber'.
     Calculate addition, subtraction, multiplication, and division of 'firstNumber' and 'secondNumber'
@@ -29,17 +29,17 @@ public class Solution05 {
         Scanner input = new Scanner(System.in);
 
         System.out.print("What is the first number? ");
-        float firstNumber = input.nextFloat();
+        int firstNumber = Integer.parseInt(input.nextLine());
 
         System.out.print("What is the second number? ");
-        float secondNumber = input.nextInt();
+        int secondNumber = Integer.parseInt(input.nextLine());
 
-        float sum = firstNumber + secondNumber;
-        float difference = firstNumber - secondNumber;
-        float product = firstNumber * secondNumber;
-        float quotient = firstNumber / secondNumber;
+        int sum = firstNumber + secondNumber;
+        int difference = firstNumber - secondNumber;
+        int product = firstNumber * secondNumber;
+        int quotient = firstNumber / secondNumber;
 
-        System.out.printf("%.2f + %.2f = %.2f\n%.2f - %.2f = %.2f\n%.2f * %.2f = %.2f\n%.2f / %.2f = %.2f",
+        System.out.printf("%d + %d = %d\n%d - %d = %d\n%d * %d = %d\n%d / %d = %d",
                           firstNumber, secondNumber, sum, firstNumber, secondNumber, difference, firstNumber,
                           secondNumber, product, firstNumber, secondNumber, quotient);
     }
